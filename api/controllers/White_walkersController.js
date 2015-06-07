@@ -7,6 +7,7 @@
 
 module.exports = {
 	march: function(req, res, next){
+    res.locals.layout = 'white_walkers/layout';
     res.view('white_walkers/home', {
       "dragonglass": "shiny black pointy rocks"
     });

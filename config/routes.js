@@ -45,10 +45,10 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'GET /white_walkers': {
-    view: 'white_walkers/home',
-    locals: {
-      layout: 'white_walkers/layout'
-    }
+
+  // NOTE: the routing seems REALLY picky about needed the trailing "/" at the
+  // end fo the URI path. Not including it caused unpredictable behavior.
+  'GET /white_walkers/march/': {
+    view: 'white_walkers/home'
   }
 };
